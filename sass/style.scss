@@ -30,6 +30,14 @@ body {
   font-weight: 600;
 }
 
+article a {
+  text-decoration: none;
+}
+
+article a:hover {
+  color: red;
+}
+
 .section-title span {
   text-transform: none;
   font-weight: 400;
@@ -85,7 +93,6 @@ body {
 .sidebar a {
   text-decoration: none;
   color: black;
-  font-size: 20px;
   font-weight: 600;
 }
 
@@ -93,6 +100,10 @@ body {
   padding: 5px 5px;
   margin: 10px auto;
   border: 1px solid rgb(201, 201, 19);
+}
+
+.sidebar .titles a {
+  font-size: 22px;
 }
 
 .sidebar li:hover {
@@ -137,12 +148,14 @@ body {
   opacity: 0.01;
   margin: 0 auto;
   width: 80%;
+  z-index: 0;
 }
 
 .post.active {
   display: block;
   opacity: 1;
   transition: all 2s;
+  z-index: 1;
 }
 
 .post-title {
@@ -167,4 +180,42 @@ body {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+.list.tags li {
+  border: none;
+  display: inline-block;
+}
+
+.list.tags li:hover {
+  background: none;
+  color: red;
+}
+
+.list.tags a {
+  color: blue;
+}
+
+.list.tags a:hover {
+  color: red;
+}
+
+.tag-size-1 {
+  font-size: 100%;
+}
+
+.tag-size-2 {
+  font-size: 150%;
+}
+
+.tag-size-3 {
+  font-size: 200%;
+}
+
+.tag-size-4 {
+  font-size: 250%;
+}
+
+.tag-size-5 {
+  font-size: 300%;
 }
