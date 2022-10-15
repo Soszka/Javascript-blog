@@ -67,7 +67,7 @@
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-4" data-tags="knife scissors" data-author="Ferynand Kiepski">
+                  <article class="post" id="article-4" data-tags="knife pencil scissors" data-author="Ferynand Kiepski">
                     <h3 class="post-title">Article 4</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
@@ -165,7 +165,7 @@
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-10" data-tags="knife scissors" data-author="Arnold Boczek">
+                  <article class="post" id="article-10" data-tags="knife pencil scissors" data-author="Arnold Boczek">
                     <h3 class="post-title">Article 10</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
@@ -194,6 +194,26 @@
               </main>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+        <script id="template-article-link" type="text/x-handlebars-template">
+          <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+        </script>
+        <script id="template-tag-link" type="text/x-handlebars-template">
+          <li><a href="#tag-{{ id }}">{{ tagName }}</a></li>
+        </script>
+        <script id="template-author-link" type="text/x-handlebars-template">
+          <li><a href="#author-{{ id }}">{{ authorName }}</a></li>
+        </script>
+        <script id="template-tag-cloud-link" type="text/x-handlebars-template">
+          {{#each tags}}
+          <li><a href="#tag-{{ tag }}" class="tag-size-{{ className }}">{{ tag }}</a></li>
+          {{/each}}
+        </script>
+        <script id="template-all-authors-link" type="text/x-handlebars-template">
+          {{#each authors}}
+          <li><a href="#author-{{ author }}">{{ author }} ({{ count }})</a></li>
+          {{/each}}
+        </script>
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -159,6 +159,10 @@ article a:hover {
   font-weight: 600;
 }
 
+.post-author li {
+  list-style: none;
+}
+
 .post-tags {
   display: flex;
 }
