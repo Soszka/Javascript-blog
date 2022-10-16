@@ -51,14 +51,15 @@ function titleClickHandler(event){
 
   
   function generateTitleLinks(customSelector = ''){
-
+  console.log(customSelector);
   /* remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
 
   /* for each article */
   let html= ' ';
-  const articles=document.querySelectorAll(optArticleSelector + customSelector);
+  const articles = document.querySelectorAll(optArticleSelector + customSelector);
+  console.log(articles, optArticleSelector + customSelector);
   for(let article of articles){
 
     /* get the article id */
@@ -249,7 +250,7 @@ function generateAuthors() {
   const articles = document.querySelectorAll(optArticleSelector);
   for(let article of articles){
     const articleAuthor = article.querySelector(optArticleAuthorSelector);
-    let html = ' ';
+    let html = '';
     const author = article.getAttribute('data-author');
     const authorLinkHTMLData = {id: author, authorName: author};
     const authorLink = templates.authorLink(authorLinkHTMLData);
@@ -262,7 +263,7 @@ function generateAuthors() {
     }
   }
   const authorsList = document.querySelector(optAuthorsListSelector);
-  authorsList.innerHTML = ' ';
+  authorsList.innerHTML = '';
   let allAuthorsLinkData = {authors: []};
   for(let author in allAuthors){
    allAuthorsLinkData.authors.push({
@@ -279,7 +280,8 @@ function authorClickHandler(event) {
   event.preventDefault();
   const clickedElement = this;
   const href = clickedElement.getAttribute('href');
-  const author = href.replace('#author', ' ');
+  const author = href.replace('#author-', '');
+  console.log(author);
   const activeAuthorLinks = document.querySelectorAll('a.active[href^="#author-"]');
   for(let activeAuthorLink of activeAuthorLinks){
     activeAuthorLink.classList.remove('active');
@@ -288,7 +290,7 @@ function authorClickHandler(event) {
   for(let authorLink of authorLinks){
     authorLink.classList.add('active');
   }
-  generateTitleLinks('[data-author~="' + author + '"]');
+  generateTitleLinks('[data-author="' + author + '"]');
 }
 
 function addClickListenersToAuthors (){
