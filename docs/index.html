@@ -18,155 +18,156 @@
                   </ul>
                 </aside>
                 <section class="posts">
-                  <article class="post active" id="article-1" data-tags="cat cactus scissors" data-author="William Shakespeare">
-                    <h3 class="post-title">Article 1</h3>
+                  <article class="post active" id="article-1" data-tags="html handlebars" data-author="Construction">
+                    <h3 class="post-title">Structure</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Duis non dolor efficitur erat interdum fringilla a lobortis dolor. Aenean in massa viverra, pretium augue et, imperdiet diam. Proin varius vitae lectus ut suscipit. Etiam metus lacus, molestie at ante eget, gravida tristique metus. Morbi finibus elit mi, ut aliquam libero tempor eu.</p>
-                      <p>Curabitur a arcu ut nunc ornare tempor. Vestibulum et augue purus. Sed mattis auctor iaculis. Duis placerat tempus nisl, et commodo sem varius sed. Ut ac ultrices leo. Aliquam efficitur augue a scelerisque lacinia. Donec sit amet justo lacus.</p>
-                      <p>Duis tincidunt tellus non lorem molestie lobortis. Ut nec mauris consectetur, convallis nisl vel, venenatis magna. Sed efficitur egestas purus, eu fermentum leo sodales in.</p>
+                      <p>The website consists of the following components:
+                      <p>Header: It includes the title of the page and header elements such as a logo.
+                      <p>Left column: It contains article titles presented as an unordered list. There is no content provided in the given code.
+                      <p>Middle column: It displays a single article. The article consists of a title (using the 'h3' element), author (an empty 'p' element), content (a 'div' element containing 'p' paragraphs), and a tag section. The tag section includes a list of tags (using the 'ul' element) with corresponding links (using 'a' elements).
+                      <p>Right column: It contains two sections - a tag cloud and a list of authors. The tag cloud is represented as an unordered list ('ul') which is empty in the provided code. The list of authors is also presented as an unordered list ('ul') which is also empty in the given code.</p>
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">design</a></li>
-                        <li><a href="#">tutorials</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-2" data-tags="cactus scissors" data-author="Jane Austen">
-                    <h3 class="post-title">Article 2</h3>
+                  <article class="post" id="article-2" data-tags="html handlebars events" data-author="Construction">
+                    <h3 class="post-title">Functionality</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Phasellus sollicitudin, arcu vel iaculis ullamcorper, quam leo viverra orci, et faucibus quam sapien vel est. Maecenas ac suscipit elit. Nullam interdum, lorem vitae venenatis pulvinar, ex dui malesuada nunc, tempus cursus enim metus vel nulla.</p>
-                      <p>Integer hendrerit, eros id efficitur dapibus, ante arcu ullamcorper orci, a iaculis felis turpis at purus. Quisque sodales posuere sapien vel consectetur. Duis dui urna, commodo non ante nec, mattis dictum enim. Donec aliquam erat sed diam lobortis, vel gravida lacus laoreet. Phasellus pretium maximus mi, eu posuere justo suscipit vel.</p>
-                      <p>Nam magna nisl, varius in malesuada vitae, facilisis vel metus. Proin rhoncus euismod leo dictum lobortis. Suspendisse non ante sapien.</p>
+                      <p>The project consists of functions that are responsible for:</p>
+                      <p>- only articles are contained in the HTML code ( tylko artykuły są zawarte w kodzie HTML )</p>
+                      <p>- after opening the page, a list of titles, a tag cloud, and a list of authors are generated using ( za pomocą ) JS,</p>
+                      <p>- after clicking on one of the titles in the left column, the corresponding article ( odpowiedni artykuł ) is displayed ( jest wyświetlany )  in the middle column,</p>
+                      <p>- after clicking on any tag or author, the list of titles in the left column is filtered.</p>
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">news</a></li>
-                        <li><a href="#">code</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-3" data-tags="cat knife scissors" data-author="Ernest Hemingway">
-                    <h3 class="post-title">Article 3</h3>
+                  <article class="post" id="article-3" data-tags="events loops" data-author="ClickHandlers">
+                    <h3 class="post-title">titleCLickHandler</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Mauris vel pellentesque turpis, ac sodales nisl. Quisque iaculis mi velit, ut convallis tellus accumsan a. Quisque iaculis, nisi et dignissim tincidunt, nisl eros euismod nulla, finibus laoreet erat enim posuere elit.</p>
-                      <p>Aenean at semper urna. Duis vel sapien molestie, egestas diam consequat, molestie nulla. Praesent a malesuada metus. Praesent et tempus leo.</p>
-                      <p>Mauris in eleifend neque, vitae eleifend velit. Maecenas purus est, bibendum eget imperdiet id, dictum sed ante. Aenean a magna et eros sagittis aliquet.</p>
+                      <p>This function is responsible for handling the click on the article title and ensures that only the clicked link and the related article receive the 'active' class, while the other elements lose this class.</p>
+                      <p>- Removes the 'active' class from all article links that already have this class. It uses the querySelectorAll method with the '.titles a.active' selector to find all such links.</p>                  
+                      <p>- It iterates through the list of found links and removes the 'active' class for each link using the classList.remove('active') method.</p>                       
+                      <p>- It iterates through the list of found articles and removes the 'active' class for each of them using the classList.remove('active') method.</p>              
+                      <p>- Retrieves the value of the 'href' attribute from the clicked link using the getAttribute('href') method. This value is used as a selector to find the relevant article.</p>                      
+                      <p>- Adds the class 'active' to the relevant article using the classList.add('active') method to activate and display it.</p>                    
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">news</a></li>
-                        <li><a href="#">reviews</a></li>
-                        <li><a href="#">design</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-4" data-tags="knife pencil scissors" data-author="J.R.R. Tolkien">
-                    <h3 class="post-title">Article 4</h3>
+                  <article class="post" id="article-4" data-tags="handlebars loops events" data-author="Generation">
+                    <h3 class="post-title">generateTitleLinks</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Morbi vel cursus nulla, vel varius mauris. Suspendisse sed elit sit amet risus faucibus vestibulum ut sit amet purus. Donec orci est, condimentum ut quam quis, scelerisque fringilla ligula.</p>
-                      <p>Quisque bibendum nisl id quam sagittis, id pretium dolor scelerisque. Suspendisse non odio nec velit dapibus placerat non a libero.</p>
-                      <p>Vivamus at tristique ex, feugiat sagittis ex. Cras cursus, ipsum et efficitur commodo, urna sapien rutrum magna, quis sodales justo ligula eget nunc. In hac habitasse platea dictumst.</p>
+                      <p>The generateTitleLinks function is used to generate a list of article titles and their links on a web page. Here is a description of how it works:</p>             
+                      <p>- Retrieving the article ID by calling article.getAttribute('id') and assigning it to the article variable</p>
+                      <p>- Retrieving the article title by calling article.querySelector(optTitleSelector).innerHTML</p>
+                      <p>- Creating the article link HTML by passing a linkHTMLData object (containing the id and title) to the templates.articleLink() function.</p>
+                      <p>- The resulting HTML code is assigned ( przypisywany ) to the linkHTML variable</p>            
+                      <p>- Retrieving references to all links inside a "titles" element by document.querySelectorAll('.titles a') and looping through each link in a for...of loop.</p>
+                      <p>- Adding a click listener for each link via link.addEventListener('click', titleClickHandler).</p>             
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">tutorials</a></li>
-                        <li><a href="#">code</a></li>
-                        <li><a href="#">design</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-5" data-tags="cat" data-author="William Shakespeare">
-                    <h3 class="post-title">Article 5</h3>
+                  <article class="post" id="article-5" data-tags="objects loops" data-author="Calculating">
+                    <h3 class="post-title">calculateTagParams</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Suspendisse sem eros, euismod condimentum arcu ac, consequat fermentum orci. Nam convallis lacus nec interdum vestibulum. Vestibulum luctus, quam eu tristique ornare, lorem nibh sodales enim, vitae tempor dolor ante vitae tortor.</p>
-                      <p>Duis venenatis metus quis luctus lobortis. In porttitor ipsum eget ligula aliquam ornare. Cras malesuada urna id volutpat sodales.</p>
-                      <p>Donec lobortis ultricies turpis, eu viverra magna gravida quis. Fusce sit amet pretium nulla. Duis rutrum metus vel libero sodales, pellentesque varius ex pulvinar.</p>
+                      <p>The calculateTagsParams function takes a 'tags' object that contains various tags as keys and their values as the number of occurrences 
+                      <p>The function iterates through these tags and finds the largest and smallest value of the occurrences, storing  them as  max  and  min  in the params object, respectively.
+                      <p>As a result, it returns a params object containing the maximum and minimum value of tag occurrences.
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">design</a></li>
-                        <li><a href="#">reviews</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-6" data-tags="cat cactus scissors pencil" data-author="J.R.R. Tolkien">
-                    <h3 class="post-title">Article 6</h3>
+                  <article class="post" id="article-6" data-tags="objects" data-author="Calculating">
+                    <h3 class="post-title">calculateTagClass</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Donec posuere iaculis ante sed hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit neque nec urna tincidunt, quis vehicula dui vulputate. Morbi est sapien, auctor ut lectus eu, placerat viverra lorem.</p>
-                      <p>Cras consectetur at erat id accumsan. Suspendisse lacinia in nulla quis vulputate. Nunc vitae consectetur augue. Nam ut vehicula mi. Aliquam tristique, purus in hendrerit porta, elit lectus finibus mi, vel malesuada nisl lectus a libero.</p>
-                      <p>Nam quis efficitur ante. Sed eget purus quis ex commodo porta eu sit amet dolor. Mauris tellus nisl, dictum nec est vitae, condimentum ornare ante. Fusce ornare hendrerit maximus. In maximus rhoncus justo.</p>
+                      <p>This function is responsible for the classification of tags based on the number of their occurrences, taking into account the parameter.</p>
+                      <p>- It takes two arguments: 'count', which represents the number of occurrences of a given tag, and a 'params' object, which contains information about the maximum and minimum value of tag occurrences.</p>
+                      <p>- The function then calculates the percentage value, which represents the share of the number of occurrences of the given tag in the range from the minimum value to the maximum value. It is the ratio of normalizedCount to normalizedMax.</p>
+                      <p>- Finally, the function returns the calculated class number for the given tag.</p>
+                      <p>- In this way, the calculateTagClass function converts the number of tag occurrences into the class number, taking into account the range of tag occurrence values specified by the 'params' parameters.</p>
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">reviews</a></li>
-                        <li><a href="#">code</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-7" data-tags="cat cactus scissors pencil knife" data-author="William Shakespeare">
-                    <h3 class="post-title">Article 7</h3>
+                  <article class="post" id="article-7" data-tags="html handlebars loops objects" data-author="Generation">
+                    <h3 class="post-title">generateTags</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Donec eleifend mauris ac nisl fermentum, ac fermentum turpis dignissim. Aliquam diam nisl, imperdiet a varius eget, lobortis sed nisi. Nullam suscipit ipsum sed magna blandit, sed pellentesque urna malesuada.</p>
-                      <p>Duis vestibulum arcu et lectus viverra porta. Praesent tempor lacus eget quam mattis, sit amet venenatis diam ultrices. Morbi gravida sapien quis ligula tincidunt, vel sagittis erat ultrices.</p>
-                      <p>Ut orci tellus, laoreet ac diam ut, tempus bibendum nisi. Nam egestas sagittis nibh. Curabitur tristique dui quis egestas pretium. Duis eu felis orci.</p>
+                      <p>This function is designed to generate and display a tag cloud on the page based on the content of the articles.</p>
+                      <p>- Two variables are initialized: allTags, which will hold information about all tags in articles, and articles, which is a list of all articles on the page.</p>
+                      <p>- Then it iterates over each article (for...of)
+                      <p>- After iterating over the articles, a tag cloud is generated based on the collected data.</p>
+                      <p>a. The place where the tag cloud is to be displayed (selector optTagsListSelector) is retrieved.</p>
+                      <p>b. The calculateTagsParams function is called with the 'allTags' argument to calculate the parameters for the tags.</p>
+                      <p>c. The allTagsData object is created, containing a list of tags with their number of occurrences and assigned class.</p>
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">code</a></li>
-                        <li><a href="#">news</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-8" data-tags="cat scissors" data-author="Jane Austen">
-                    <h3 class="post-title">Article 8</h3>
+                  <article class="post" id="article-8" data-tags="loops events html" data-author="ClickHandlers">
+                    <h3 class="post-title">tagClickHandler</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Praesent quis imperdiet erat. Curabitur tempor sapien a interdum malesuada. Proin libero erat, sagittis a sollicitudin eget, pulvinar nec risus. Cras et suscipit sem.</p>
-                      <p>Maecenas consequat diam nec sollicitudin congue. Aenean porttitor porttitor quam, condimentum interdum metus congue sed. Donec at nulla ipsum.</p>
-                      <p>Mauris non congue dui. Aenean ac eros vitae massa vulputate aliquet ut ac elit. Morbi iaculis auctor nunc aliquet luctus. Nunc tincidunt sem dui, quis interdum leo pellentesque eget. Fusce id leo varius, imperdiet nunc vitae, tristique mi. Mauris quis interdum justo. Mauris auctor purus eu leo faucibus feugiat. Nulla at odio vitae leo semper blandit.</p>
+                      <p>This function handles user interaction by clicking on a tag in the tag cloud. As a result, when a tag is clicked, the tagClickHandler function performs the following tasks:</p>
+                      <p>- The href attribute of the clicked item is fetched, which contains the tag ID in the format '#tag-name'.</p>
+                      <p>- Using the 'replace' method on the 'href' string, the '#tag-' prefix is removed, leaving only the tag name. This tag name gets assigned to the 'tag' variable.</p>
+                      <p>- All active tag links that have an href attribute starting with '#tag-' are fetched. The 'a.active[href^="#tag-"]' selector is used for this. The for...of loop iterates over these links.</p>
+                      <p>- For each active link of the tag, the active class is removed to remove the visual indication of the active link.</p>
+                      <p>- As a result, when a tag is clicked in the tag cloud, the tagClickHandler function removes the active tag from other tag links, adds the active tag to the clicked tag link, and generates a new list of article links based on the clicked tag.</p>
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">news</a></li>
-                        <li><a href="#">design</a></li>
-                        <li><a href="#">tutorials</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-9" data-tags="cat cactus pencil" data-author="William Shakespeare">
-                    <h3 class="post-title">Article 9</h3>
+                  <article class="post" id="article-9" data-tags="html handlebars events loops objects" data-author="Generation">
+                    <h3 class="post-title">generateAuthors</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
-                      <p>Tam et facilisis purus. Donec vulputate est quis lobortis posuere. Nunc vitae lorem ut odio faucibus pulvinar nec in justo. Ut ut ante ac tellus ornare tempus. Nunc maximus, tortor et dictum convallis, nunc libero posuere leo, scelerisque ultrices arcu sapien ut tellus.</p>
-                      <p>Fusce lacinia augue massa, non tincidunt tortor auctor quis. Vestibulum ut pretium nisl. Etiam id tellus tempus, commodo ligula vehicula, porta magna.</p>
-                      <p>Donec fringilla blandit dolor vel aliquet. Fusce tortor sapien, lobortis eu vehicula sit amet, dignissim et lectus. In ullamcorper metus vel massa fermentum, at fermentum dui sollicitudin. Nullam lacinia elit vel tortor ullamcorper pulvinar.</p>
+                      <p>This function is designed to generate and display a list of authors on the page based on the content of the articles. After calling the function on the page, a list of authors will be generated along with their number of occurrences, and links to the appropriate places for displaying authors in articles will be assigned.</p>
+                      <p>Each article is iterated (for...of)
+                      <p>It iterates through each author in the allAuthors object, where the following steps are performed for each author:</p>
+                      <p>a. An object is added to the allAuthorsLinkData.authors array containing information about the author, such as name and number of occurrences.</p>
+                      <p>The generated HTML for the author list is assigned to the contents of the author list display space (authorsList.innerHTML) using the templates.authorsListLink function and passing the allAuthorsLinkData object as an argument.</p>
                     </div>
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">news</a></li>
-                        <li><a href="#">tutorials</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="post" id="article-10" data-tags="knife pencil scissors" data-author="J.R.R. Tolkien">
-                    <h3 class="post-title">Article 10</h3>
+                  <article class="post" id="article-10" data-tags="events loops html" data-author="ClickHandlers">
+                    <h3 class="post-title">authorClickHandler</h3>
                     <p class="post-author"></p>
                     <div class="post-content">
                       <p>Aliquam erat volutpat. Ut non eleifend lectus. Donec suscipit tellus tempor, ornare dui id, hendrerit neque. Phasellus lacinia laoreet dui in luctus. Sed hendrerit, magna sit amet varius tempor, augue augue scelerisque est, non scelerisque mauris libero eu sapien.</p>
@@ -176,10 +177,6 @@
                     <div class="post-tags">
                       <p><strong>Tags:</strong></p>
                       <ul class="list list-horizontal">
-                        <li><a href="#">code</a></li>
-                        <li><a href="#">design</a></li>
-                        <li><a href="#">news</a></li>
-                        <li><a href="#">reviews</a></li>
                       </ul>
                     </div>
                   </article>
@@ -187,7 +184,7 @@
                 <aside class="sidebar">
                   <h2 class="section-title">Tags</h2>
                   <ul class="list tags"></ul>
-                  <h2 class="section-title">Authors</h2>
+                  <h2 class="section-title">Functions</h2>
                   <ul class="list authors">
                   </ul>
                 </aside>
