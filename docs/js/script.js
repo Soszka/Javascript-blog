@@ -21,7 +21,7 @@ const templates = {
 
 function titleClickHandler(event){
 
-  console.log(event);
+  event.preventDefault();
   const activeLinks = document.querySelectorAll('.titles a.active');
   for(let activeLink of activeLinks){
     activeLink.classList.remove('active');
